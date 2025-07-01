@@ -1,0 +1,16 @@
+require:
+  - standard
+  - standard-custom
+  - standard-performance
+  - rubocop-performance
+
+inherit_gem:
+  rubocop-rails-omakase: rubocop.yml
+  standard: config/base.yml
+  standard-custom: config/base.yml
+  standard-performance: config/base.yml
+# Overwrite or add rules to create your own house style
+#
+# # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
+# Layout/SpaceInsideArrayLiteralBrackets:
+#   Enabled: false

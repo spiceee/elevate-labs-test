@@ -1,0 +1,30 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# == Schema Information
+#
+# Table name: game_events
+#
+#  id          :integer          not null, primary key
+#  game_name   :string
+#  kind        :integer          default(0)
+#  occurred_at :datetime
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  user_id     :integer          not null
+#
+# Indexes
+#
+#  index_game_events_on_game_name  (game_name)
+#  index_game_events_on_user_id    (user_id)
+#
+# Foreign Keys
+#
+#  user_id  (user_id => users.id)
+#
+one:
+  user: one
+  game_name: MyString
+
+two:
+  user: two
+  game_name: MyString
