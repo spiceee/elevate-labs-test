@@ -6,8 +6,12 @@ This repo tries to solve the requirements of the backend take-home assignment, w
 
 You can use the [integration tests](https://github.com/spiceee/elevate-labs-test/tree/main/test/integration) as both the specification and proof of completion for every phase mentioned in the assignment.
 
-* Ruby version
-3.3.5 (per request)
+| REQ  | VERSION  |
+|---|---|
+| Ruby    | 3.3.5 (per assignment request)  |
+| Rails   | 8.0.2 |
+| SQLite3 | >=2.1  |
+
 
 ## Assumptions
 
