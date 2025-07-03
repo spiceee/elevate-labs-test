@@ -19,7 +19,7 @@ This stemmed from the assignment requirement that a session would start after a 
 
 However, there's also a mention of a token as the payload for a successful sign-on, which implies that the client could also authenticate with a token via header authentication.
 
-I'm not sure this architecture decision was part of the assignment. It could also be that mention to http sessions are, abeit wrongly, used to infer that the API flow should start with a valid credential handshake. Who knows?
+I'm not sure this architecture decision was part of the assignment. It could also be that mentions of HTTP sessions are, albeit wrongly, used to infer that the API flow should start with a valid credential handshake. Who knows?
 
 I've assumed there is a remote billing gateway service that holds the user's billing and subscription status.
 User subscription statuses are calculated every 24 hours, and the API needs to be in sync with this as much as possible, or at least that's what I assumed from this specific info drop 💣.
@@ -29,12 +29,12 @@ User subscription statuses are calculated every 24 hours, and the API needs to b
 There are several caveats with this assignment and they stem from the following asks not being formalized in a proper specification:
 
 1. The assignment requirement that a session would start after a user signs on. A session implies a stateful experience, hence the need for cookie support.
-2. The mention of a token (JWT? Static? Has TTL?) as the payload for a successful sign-on, which implies that the client could also authenticate with a token via header authentication.
-3. Why game_events should only take "COMPLETED" as a status? What is the real business case for this?
+2. The mention of a token (JWT, static, or with a TTL?) as the payload for a successful sign-on implies that the client could also authenticate with a token via header authentication.
+3. Why should game_events only take "COMPLETED" as a status? What is the real business case for this?
 4. The assumption that user subscription statuses are calculated every 24 hours, and the API needs to be in sync with this as much as possible.
-5. What about the mention some user_ids will 404 with the billing gateway? What is the real business case for this?
+5. What about the mention that some user_ids will 404 with the billing gateway? What is the real business case for this?
 
-This could have never been a task assigned to me via a Jira ticket. This needs serious requirement gathering.
+This could never have been a task assigned to me via a Jira ticket. I think this needs serious requirement gathering.
 
 Finally, this is not a _"an evening of your time to complete"_ assignment, as mentioned in the task description AND the screening interview. This is a **SOLID** 5 to 8 Jira ticket. I'm not sure if playing this down to a 3 to 4 hours is part of the assignment. Don't rush this. _Take your time_!
 
