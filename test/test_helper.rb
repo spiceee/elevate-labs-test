@@ -7,6 +7,15 @@ ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
 
+require "minitest/reporters"
+require "webmock/minitest"
+
+reporter_options = {color: true}
+Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
+
+require 'coveralls'
+Coveralls.wear!('rails')
+
 module ActiveSupport
   class TestCase
     # Run tests in parallel with specified workers
@@ -24,26 +33,8 @@ module ActiveSupport
     # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
     fixtures :all
     # Add more helper methods to be used by all tests here...
-  end
-end
 
-require "minitest/reporters"
-require "webmock/minitest"
-
-reporter_options = {color: true}
-Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
-
-module ActiveSupport
-  class TestCase
-    # Run tests in parallel with specified workers
-    parallelize(workers: :number_of_processors)
-
-    # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-    fixtures :all
-
-    # Add more helper methods to be used by all tests here...
     Faker::Config.random = Random.new
-
     Subscription::JWT_TOKEN = "1234"
   end
 end
