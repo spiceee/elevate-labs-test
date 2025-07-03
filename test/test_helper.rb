@@ -4,7 +4,7 @@ if ENV["COVERAGE"]
 
   SimpleCov.start "rails"
   SimpleCov.formatter = Coveralls::SimpleCov::Formatter
-  Coveralls.wear!('rails')
+  Coveralls.wear!("rails")
 
 end
 
@@ -18,7 +18,7 @@ require "coveralls"
 
 reporter_options = {color: true}
 Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
-Coveralls.wear!('rails')
+Coveralls.wear!("rails")
 
 module ActiveSupport
   class TestCase
