@@ -80,7 +80,7 @@ class Phase4UserSubscriptionStatusTest < ActionDispatch::IntegrationTest
       )
     end
 
-    test "should not touch user subscription status" do
+    test "should surface expired status from gateway" do
       @subscription.update(active: true, last_checked_at: 3.days.ago)
       get "/api/user", headers: {"Authorization" => "Bearer #{@user.token}"}
 
