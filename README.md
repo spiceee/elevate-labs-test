@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/spiceee/elevate-labs-test/badge.svg?branch=main)](https://coveralls.io/github/spiceee/elevate-labs-test?branch=main)
+
 # 🧘🏽 Elevate Labs Take-home Assignment 🧘🏻‍♂️
 
 This repo tries to solve the requirements of the backend take-home assignment, which is a multi-step task, divided in phases, each phase has a specific deliverable.
