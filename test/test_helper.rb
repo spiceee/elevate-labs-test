@@ -1,6 +1,11 @@
 if ENV["COVERAGE"]
   require "simplecov"
+  require "coveralls"
+
   SimpleCov.start "rails"
+  SimpleCov.formatter = Coveralls::SimpleCov::Formatter
+  Coveralls.wear!('rails')
+
 end
 
 ENV["RAILS_ENV"] ||= "test"
@@ -9,11 +14,10 @@ require "rails/test_help"
 
 require "minitest/reporters"
 require "webmock/minitest"
+require "coveralls"
 
 reporter_options = {color: true}
 Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
-
-require 'coveralls'
 Coveralls.wear!('rails')
 
 module ActiveSupport
