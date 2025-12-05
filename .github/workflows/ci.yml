@@ -65,4 +65,4 @@ jobs:
         run: rm -rf coverage/ && DISABLE_SPRING=1 COVERAGE=1 bin/rails test
 
       - name: Coveralls GitHub Action
-        uses: coverallsapp/github-action@v2.3.6
+        uses: coverallsapp/github-action@v2.3.7
