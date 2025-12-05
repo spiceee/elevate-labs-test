@@ -1,6 +1,7 @@
 module Authentication
   include ActionController::HttpAuthentication::Token::ControllerMethods
   extend ActiveSupport::Concern
+
   class InvalidApiToken < StandardError; end
 
   included do
