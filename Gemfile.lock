@@ -96,7 +96,7 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.3.7)
     connection_pool (3.0.2)
-    coveralls_reborn (0.29.0)
+    coveralls_reborn (0.29.1)
       simplecov (~> 0.22.0)
       term-ansicolor (~> 1.7)
       thor (~> 1.2)
@@ -310,6 +310,8 @@ GEM
       erb
       psych (>= 4.0.0)
       tsort
+    readline (0.0.4)
+      reline
     regexp_parser (2.12.0)
     reline (0.6.3)
       io-console (~> 0.5)
@@ -405,9 +407,10 @@ GEM
     thruster (0.1.21-x86_64-darwin)
     thruster (0.1.21-x86_64-linux)
     timeout (0.6.1)
-    tins (1.48.0)
+    tins (1.54.0)
       bigdecimal
       mize (~> 0.6)
+      readline
       sync
     tsort (0.2.0)
     tzinfo (2.0.6)
